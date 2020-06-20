@@ -14,8 +14,12 @@ module.exports = function (app) {
   // In each of the below cases the user is shown an HTML page of content
   // ---------------------------------------------------------------------------
 
-  app.get("/notes", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/notes.html"));
+  app.get("/exercise", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/exercise.html"));
+  });
+
+  app.get("/stats", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/stats.html"));
   });
 
   // If no matching route is found default to home
